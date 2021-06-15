@@ -1,0 +1,72 @@
+import { Head } from "mdx-deck";
+
+export { future as theme } from "./theme";
+
+<Head>
+  <title>Defi Surfing</title>
+</Head>
+
+# Catch a money stream wave 🏄🏻
+
+---
+
+# Batch Call
+
+# Representing value over time
+
+---
+
+# Open & Close Streams
+
+Install the package
+
+```bash
+yarn add @superfluid-finance/js-sdk @ethersproject/contracts @ethersproject/providers
+```
+
+```js
+const SuperfluidSDK = require("@superfluid-finance/js-sdk");
+const { Web3Provider } = require("@ethersproject/providers");
+
+const sf = new SuperfluidSDK.Framework({
+  ethers: new Web3Provider(window.ethereum)
+});
+await sf.initialize();
+```
+
+Calculate flow rate
+
+---
+
+- How to query the data (3 min), streamed so far
+- Thinking of streams as "alive"
+- Showing a moving number in JavaScript
+
+---
+
+# Write slides using MDX
+
+This uses [mdx-deck][mdx-deck] to enable you to write slides using
+markdown and react in `.mdx` files 🙌
+
+```notes
+- You can create speaker notes using fenced code blocks like this one
+```
+
+[mdx-deck]: https://github.com/jxnblk/mdx-deck
+
+---
+
+# You can use custom React components
+
+import Button from "./components/Button";
+
+<Button />
+
+---
+
+# This runs on Glitch.com
+
+You can [view the source][mdx-deck-starter] and remix it to create your own deck.
+
+[mdx-deck-starter]: https://glitch.com/edit/#!/mdx-deck-starter
