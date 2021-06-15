@@ -4,9 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run-script build && node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "mdx-deck -h 0.0.0.0 -p $PORT deck.mdx",
+    "build": "mdx-deck build deck.mdx"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mdx-deck": "^4.1.1"
+  }
 }
