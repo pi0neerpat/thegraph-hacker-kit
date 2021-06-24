@@ -1,0 +1,25 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: TestToken
+    network: mainnet
+    source:
+      abi: ERC20
+      address: "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+    mapping:
+      file: ./src/mappings/token.ts
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      abis:
+        - name: ERC20
+          file: ./src/abis/ERC20.json
+      entities:
+        - Token
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer

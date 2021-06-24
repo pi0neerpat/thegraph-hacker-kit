@@ -1,0 +1,16 @@
+{
+  "name": "@erc20-example/contracts",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "node": "hardhat node --hostname 0.0.0.0",
+    "deploy": "hardhat run scripts/deploy.js --network localhost"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@openzeppelin/contracts": "^4.1.0",
+    "ethers": "^5.3.1",
+    "hardhat": "^2.4.0",
+    "prettier": "^2.3.1"
+  }
+}
