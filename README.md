@@ -28,8 +28,6 @@
 
 Pi0neerpat and dan13ram are experienced subgraph developers and members of The Raid Guild, a web3 consultancy and services DAO. They've worked on subgraph projects for clients such as Superfluid, xDai Omnibridge, NFTX, and rDAI.
 
-### HIRE US ⚔️ https://raidguild.org/ ⚔️
-
 👤 **pi0neerpat**
 
 From creating subgraphs, consuming them in dapps, and even running a Graph Protocol Indexer, Patrick is a jack-of-all-trades in web3. He strives for excellence in both technical writing and guided-instruction, and is always open to questions from his students.
@@ -41,8 +39,11 @@ From creating subgraphs, consuming them in dapps, and even running a Graph Proto
 👤 **dan13ram**
 
 - Website: https://
+
   - Twitter: [@](https://twitter.com/)
   - GitHub: [@](https://github.com/)
+
+## Hire Us ⚔️ https://raidguild.org ⚔️
 
 ## Show your support
 
@@ -50,9 +51,9 @@ Give a ⭐️ if this project helped you!
 
 ## Contents
 
-1. 🧑‍🚀 Subgraph Hacker Bootcamp 🥾 (funded by Graph Protocol)
-2. Recorded Live Workshop, including audience Q+A
-3. A sense of "I can do this"
+- 🧑‍🚀 Subgraph Hacker Bootcamp 🥾
+- Recorded Live Workshop, including audience Q+A
+- A sense of "I can do this"
 
 ## Objectives
 
@@ -72,6 +73,12 @@ Spend at least 1 hour doing the tutorial, and skimming the docs:
 Graphql Tutorial: https://graphql.org/learn/
 Making Graph Queries: https://thegraph.com/docs/graphql-api#queries
 
+Software required:
+
+- [docker](https://docs.docker.com/install/)
+- [docker-compose](https://docs.docker.com/compose/install/)
+- Npm packages `yarn global add truffle ganache-cli @graphprotocol/graph-cli`
+
 ## Additional resources:
 
 - Run a Graph Indexer using Docker [pi0neerpat/indexer-docker-compose](https://github.com/pi0neerpat/indexer-docker-compose)
@@ -82,6 +89,10 @@ Making Graph Queries: https://thegraph.com/docs/graphql-api#queries
 - https://oneclickdapp.com - Easy interfaces for any smart contract
 - https://spendless.io/ - No-loss giving for charity
 - https://superfluid.finance - Defi primitive for recurring payments and novel token features
+
+## Thank You!
+
+The workshop and materials here were made possible thanks to a grant from The Graph Protocol.
 
 ---
 
