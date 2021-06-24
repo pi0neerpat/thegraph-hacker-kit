@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "node": "hardhat node --hostname 0.0.0.0",
-    "test-transfers": "hardhat run scripts/test-transfers.js --network localhost",
-    "test-full": "hardhat run scripts/test-full.js --network localhost"
+    "local-node": "hardhat node --hostname 0.0.0.0",
+    "test-deploy": "hardhat run scripts/deploy.js --network localhost",
+    "test-mints": "hardhat run scripts/mints.js --network localhost",
+    "test-transfers": "hardhat run scripts/transfers.js --network localhost",
+    "test-approvals": "hardhat run scripts/approvals.js --network localhost",
+    "test-all": "hardhat run scripts/test-all.js --network localhost"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",

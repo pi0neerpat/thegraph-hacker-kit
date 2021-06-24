@@ -2,25 +2,32 @@ const { ethers } = require('hardhat');
 const { utils } = ethers;
 
 async function main() {
-  const TestToken = await ethers.getContractFactory('TestToken');
-  const token = await TestToken.deploy();
-
-  await token.deployed();
-
-  console.log('TestToken deployed to:', token.address);
-
   const accounts = await ethers.getSigners();
 
   const alice = accounts[0];
   const bob = accounts[1];
   const carol = accounts[2];
 
-  console.log('minting 1000 to alice');
-  await token.mint(alice.address, utils.parseEther('1000'));
-  console.log('minting 2000 to bob');
-  await token.mint(bob.address, utils.parseEther('2000'));
-  console.log('minting 3000 to carol');
-  await token.mint(carol.address, utils.parseEther('3000'));
+  const TestToken = await ethers.getContractFactory('TestToken');
+
+  let token;
+  if (utils.isAddress(ERC20_TOKEN_ADDRESS)) {
+    token = TestToken.attach(ERC20_TOKEN_ADDRESS);
+    console.log('Connected to TestToken deployed at:', token.address);
+  } else {
+    token = await TestToken.deploy();
+
+    await token.deployed();
+
+    console.log('TestToken deployed to:', token.address);
+
+    console.log('minting 1000 to alice');
+    await token.mint(alice.address, utils.parseEther('1000'));
+    console.log('minting 2000 to bob');
+    await token.mint(bob.address, utils.parseEther('2000'));
+    console.log('minting 3000 to carol');
+    await token.mint(carol.address, utils.parseEther('3000'));
+  }
 
   // balances:
   // alice: 1000 * 10^18 = 1000000000000000000000
