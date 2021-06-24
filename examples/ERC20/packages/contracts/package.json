@@ -8,7 +8,7 @@
     "test-mints": "hardhat run scripts/mints.js --network localhost",
     "test-transfers": "hardhat run scripts/transfers.js --network localhost",
     "test-approvals": "hardhat run scripts/approvals.js --network localhost",
-    "test-all": "hardhat run scripts/test-all.js --network localhost"
+    "test-all": "hardhat run scripts/all.js --network localhost"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",

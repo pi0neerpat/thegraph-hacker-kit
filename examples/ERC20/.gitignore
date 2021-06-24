@@ -2,7 +2,7 @@ node_modules
 public
 yarn-error.log
 subgraph.yaml
-src/types
+packages/subgraph/src/types
 build
 cache
 artifacts

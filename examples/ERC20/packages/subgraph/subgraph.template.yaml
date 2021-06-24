@@ -4,10 +4,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: TestToken
-    network: mainnet
+    network: {{network}}
     source:
       abi: ERC20
       address: "{{tokenAddress}}"
+      startBlock: {{startBlock}}
     mapping:
       file: ./src/mappings/token.ts
       kind: ethereum/events

@@ -1,6 +1,8 @@
 const { ethers } = require('hardhat');
 const { utils } = ethers;
 
+const { ERC20_TOKEN_ADDRESS } = process.env;
+
 async function main() {
   const accounts = await ethers.getSigners();
 
