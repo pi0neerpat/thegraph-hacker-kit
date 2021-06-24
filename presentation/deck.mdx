@@ -6,13 +6,12 @@ import { nightOwl } from "@code-surfer/themes"
 import myTheme from './theme'
 
 import GraphQuery from './components/GraphQuery'
-import Counter from './components/Counter'
 
 export const theme = myTheme
 
-<Head><title>🧑‍🚀 Subgraph Developer Bootcamp 🥾</title></Head>
+<Head><title>Subgraph Dev Bootcamp</title></Head>
 
-# 🧑‍🚀 Subgraph Developer Bootcamp 🥾
+# 🧑‍🚀 Subgraph Dev Bootcamp 🥾
 
 Subgraphs, graph-nodes, and queries 
 
@@ -57,7 +56,37 @@ const result = await axios.post(QUERY_URL, { query })
 
 ---
 
-# ERC20 Example
+# ERC20 Example 💰
+
+
+
+- How many tokens does a user have?
+
+---
+
+<CodeSurfer theme={nightOwl}> 
+
+```js title="TestToken.sol"
+// SPDX-License-Identifier: MIT
+
+pragma solidity ^0.8.0;
+
+import 'hardhat/console.sol';
+import '@openzeppelin/contracts/token/ERC20/ERC20.sol';
+
+contract TestToken is ERC20 {
+    constructor() ERC20('Test Token', 'TEST') {
+        console.log('Deploying TestToken');
+    }
+
+    function mint(address account, uint256 amount) external {
+        console.log("Minting '%s' to '%s'", amount, account);
+        _mint(account, amount);
+    }
+}
+```
+
+</CodeSurfer>
 
 ---
 
@@ -66,10 +95,45 @@ const result = await axios.post(QUERY_URL, { query })
 ```yaml showNumbers title="Subgraph.yaml" file=./subgraph.yaml
 ```
 
-```yaml showNumbers 10:14 title="Token details" file=./subgraph.yaml
+```yaml showNumbers 4:25 title="Data Sources" file=./subgraph.yaml
 ```
 
-```yaml showNumbers 15:26 title="Mappings" file=./subgraph.yaml
+```yaml showNumbers 5:10 title="Contract Details" file=./subgraph.yaml
+```
+
+
+</CodeSurfer>
+
+---
+
+<CodeSurfer theme={nightOwl}>
+
+```yaml showNumbers 11:25 title="Mappings" file=./subgraph.yaml
+```
+
+```yaml showNumbers 21:25 title="Handlers" file=./subgraph.yaml
+```
+
+</CodeSurfer>
+
+---
+
+
+<CodeSurfer theme={nightOwl}>
+
+```graphql showNumbers title="Schema" file=./schema.graphql
+```
+
+```graphql showNumbers 1:11 title="Entiy" file=./schema.graphql
+```
+
+```graphql showNumbers 1:2 title="ID / Constants" file=./schema.graphql
+```
+
+```graphql showNumbers 3:4 title="State" file=./schema.graphql
+```
+
+```graphql showNumbers 5:10 title="Links" file=./schema.graphql
 ```
 
 </CodeSurfer>
@@ -89,7 +153,6 @@ const result = await axios.post(QUERY_URL, { query })
 
 Come say hello! http://discord.superfluid.finance
 
----
 
 
 

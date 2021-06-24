@@ -1,17 +1,17 @@
-import { themes } from 'mdx-deck'
+import { prism } from 'mdx-deck/themes'
 
 export default {
-  ...themes.prism,
-  ...themes.hack,
-  // fonts: {
-  //   body: 'Roboto, sans-serif',
-  //   monospace: '"Roboto Mono", monospace',
-  // },
-  colors: {
-    text: 'black',
-    background: 'white',
-    primary: 'blue',
+  ...prism,
+  // ...themes.hack,
+  fonts: {
+    body: 'Roboto, sans-serif',
+    monospace: '"Roboto Mono", monospace',
   },
+  // colors: {
+  //   text: 'black',
+  //   background: 'white',
+  //   primary: 'blue',
+  // },
 }
 
   // Customize your presentation theme here.

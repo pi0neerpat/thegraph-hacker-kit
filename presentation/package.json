@@ -22,8 +22,7 @@
     "code-surfer": "^3.1.1",
     "express": "^4.17.1",
     "mdx-code": "^2.0.0",
-    "mdx-deck": "^4.1.1",
-    "odometer": "^0.4.8",
+    "mdx-deck": "3.0.10",
     "react-json-to-table": "^0.1.7",
     "react-syntax-highlighter": "^15.4.3",
     "use-odometer": "^0.0.4"
