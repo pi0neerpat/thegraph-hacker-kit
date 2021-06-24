@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run-script build && node server.js",
+    "start": "mdx-deck deck.mdx",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "mdx-deck -h 0.0.0.0 -p $PORT deck.mdx",
     "build": "mdx-deck build deck.mdx"
@@ -13,7 +13,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@ethersproject/contracts": "^5.3.0",
+    "@ethersproject/providers": "^5.3.1",
+    "@ethersproject/units": "^5.3.0",
+    "@superfluid-finance/js-sdk": "^0.4.3",
+    "axios": "^0.21.1",
     "express": "^4.17.1",
-    "mdx-deck": "^4.1.1"
+    "mdx-code": "^2.0.0",
+    "mdx-deck": "^4.1.1",
+    "odometer": "^0.4.8",
+    "react-json-to-table": "^0.1.7",
+    "react-syntax-highlighter": "^15.4.3",
+    "use-odometer": "^0.0.4"
   }
 }

@@ -1,27 +1,32 @@
-import { Head, themes } from "mdx-deck";
+import { Head } from "mdx-deck";
+import Code from 'mdx-code';
 
-export const theme = themes.future
+import myTheme from './theme'
 
+import GraphQuery from './components/GraphQuery'
+import Counter from './components/Counter'
 
-<title>Defi Surfing</title>
+export const theme = myTheme
 
+<Head><title>Defi Surfing w/ Superfluid</title></Head>
 
-# Catch a money stream wave 🏄🏻
+# Defi Surfing w/ Superfluid 🏄🏻
+
+Ride the Superfluid Wave 
+
+```js
+alice.flow(bob.address, 10000000)
+```
 
 ---
 
-# Batch Call
+# JS-SDK Setup
 
-# Representing value over time
-
----
-
-# Open & Close Streams
-
-Install the package
+📖 Docs [here](https://docs.superfluid.finance/superfluid/protocol-tutorials/frontend-+-nodejs)
 
 ```bash
-yarn add @superfluid-finance/js-sdk @ethersproject/contracts @ethersproject/providers
+yarn add @superfluid-finance/js-sdk \
+@ethersproject/contracts @ethersproject/providers
 ```
 
 ```js
@@ -29,42 +34,153 @@ const SuperfluidSDK = require("@superfluid-finance/js-sdk");
 const { Web3Provider } = require("@ethersproject/providers");
 
 const sf = new SuperfluidSDK.Framework({
-  ethers: new Web3Provider(window.ethereum)
+    ethers: new Web3Provider(window.ethereum)
 });
-await sf.initialize();
+await sf.initialize()
 ```
 
-Calculate flow rate
+--- 
 
----
+# Open & Close Streams
 
-- How to query the data (3 min), streamed so far
-- Thinking of streams as "alive"
-- Showing a moving number in JavaScript
+- 🧾 Token [list](https://docs.superfluid.finance/superfluid/networks/networks)
+- Update by changing flowRate
 
----
+```js
+const carol = sf.user({
+    address: walletAddress,
+    token: '0xF2d68898557cCb2Cf4C10c3Ef2B034b2a69DAD00'
+});
 
-# Write slides using MDX
-
-This uses [mdx-deck][mdx-deck] to enable you to write slides using
-markdown and react in `.mdx` files 🙌
-
-```notes
-- You can create speaker notes using fenced code blocks like this one
+await carol.flow({
+    recipient: '0xA8f3447922d786045CB582B0C825723B744a54df',
+    // 1000 tokens per month, for a token with 18 decimals
+    flowRate: '385802469135802'
+});
 ```
 
-[mdx-deck]: https://github.com/jxnblk/mdx-deck
+--- 
+
+# 🧮 Flow Rate Calculation
+
+
+<Code>
+
+```js 
+const oneMinute = 60;
+const oneHour = 60 * oneMinute;
+const oneDay = 24 * oneHour;
+const oneMonth = 30 * oneDay;
+
+const onePerHour = 1e18 / oneHour;
+const onePerMonth = 1e18 / oneMonth;
+
+console.log(`1 token per hour: ${onePerHour.toFixed(0)} tokens (wei) / second`);
+console.log(`1 token per month: ${onePerMonth.toFixed(0)} tokens (wei) / second`);
+```
+
+</Code>
+
+
+- Pay attention to units! See [Solidity docs](https://docs.soliditylang.org/en/v0.8.5/units-and-global-variables.html?highlight=wei#ether-units)
+---
+
+# 📡 Fetch Data
+
+- Accounts, flows, token events, transactions
+- [Playground](https://thegraph.com/explorer/subgraph/superfluid-finance/superfluid-xdai) from The Graph
+- 📖 Docs + learning resources [here](https://docs.superfluid.finance/superfluid/docs/subgraph)
+
+```js
+const query = `{
+    account(id: "0x000deb0c92e6d3da7f77ed01b8473b3f7f4efc39") {
+        flowsOwned {
+            flowRate
+            sum
+            lastUpdate
+            token { 
+                id
+                symbol
+            }
+        }
+    }
+  }
+`
+const result = await axios.post(QUERY_URL, { query })
+```
 
 ---
 
-# You can use custom React components
+# 📡 Fetch Data - Example  
 
+<GraphQuery/>
 
+- See the React component above in `/components/GraphQuery.js`
 
 ---
 
-# This runs on Glitch.com
+# Calculating Totals
 
-You can [view the source][mdx-deck-starter] and remix it to create your own deck.
+<Code>
 
-[mdx-deck-starter]: https://glitch.com/edit/#!/mdx-deck-starter
+```js
+const now = new Date() 
+const THREE_HOURS_AGO = new Date(now - 3 * 3600); 
+const lastUpdate = THREE_HOURS_AGO
+const sum = 0
+const flowRate = 0.00027778 // 1 per hour
+
+const totalFlowed = sum + flowRate * (now - lastUpdate)
+
+console.log(`Total flowed: ${totalFlowed} tokens`)
+```
+
+</Code>
+
+- Use a Big Number library like `bn.js` or `@ethersproject/units`
+
+---
+
+# Streams are ALIVE! 🧟
+
+```js
+const interestEarnedIn2Seconds = rate * 2
+React.useEffect(() => {
+    const timer = setTimeout(() => {
+        setCount(count + interestEarnedIn2Seconds);
+    }, 2000);
+    return () => clearTimeout(timer);
+});
+```
+
+<Counter initialValue={1000000} rate={.00027778}/>
+
+- See the React component above in `/components/Counter.js`
+---
+
+# 🌄 Your Adventure Awaits
+
+## Super Tokens 🦸
+
+- **Streams**: Move tokens over time
+- **ERC777**:  Tokens which can "react" to certain events using callbacks. Learn about the standard at https://erc777.org
+- **Batch Call**: Have you ever wanted to execute 100 transactions at the same time? Learn how in the [docs](https://docs.superfluid.finance/superfluid/docs/batch-call).
+
+## Super Apps 🤖
+
+Automated flows, NFTs, games, etc.
+
+---
+
+# 🤝 Get Help 
+
+[🛠️ Examples](https://docs.superfluid.finance/superfluid/resources/examples) to get started
+
+Come say hello! http://discord.superfluid.finance
+
+---
+
+
+
+
+
