@@ -8,102 +8,38 @@ import Counter from './components/Counter'
 
 export const theme = myTheme
 
-<Head><title>Defi Surfing w/ Superfluid</title></Head>
+<Head><title>🧑‍🚀 Subgraph Developer Bootcamp 🥾</title></Head>
 
-# Defi Surfing w/ Superfluid 🏄🏻
+# 🧑‍🚀 Subgraph Developer Bootcamp 🥾
 
-Ride the Superfluid Wave 
-
-```js
-alice.flow(bob.address, 10000000)
-```
-
----
-
-# JS-SDK Setup
-
-📖 Docs [here](https://docs.superfluid.finance/superfluid/protocol-tutorials/frontend-+-nodejs)
+Subgraphs, graph-nodes, and queries 
 
 ```bash
-yarn add @superfluid-finance/js-sdk \
-@ethersproject/contracts @ethersproject/providers
+Made with <3 by pi0neerpat & dan13ram
 ```
 
-```js
-const SuperfluidSDK = require("@superfluid-finance/js-sdk");
-const { Web3Provider } = require("@ethersproject/providers");
-
-const sf = new SuperfluidSDK.Framework({
-    ethers: new Web3Provider(window.ethereum)
-});
-await sf.initialize()
-```
-
---- 
-
-# Open & Close Streams
-
-- 🧾 Token [list](https://docs.superfluid.finance/superfluid/networks/networks)
-- Update by changing flowRate
-
-```js
-const carol = sf.user({
-    address: walletAddress,
-    token: '0xF2d68898557cCb2Cf4C10c3Ef2B034b2a69DAD00'
-});
-
-await carol.flow({
-    recipient: '0xA8f3447922d786045CB582B0C825723B744a54df',
-    // 1000 tokens per month, for a token with 18 decimals
-    flowRate: '385802469135802'
-});
-```
-
---- 
-
-# 🧮 Flow Rate Calculation
-
-
-<Code>
-
-```js 
-const oneMinute = 60;
-const oneHour = 60 * oneMinute;
-const oneDay = 24 * oneHour;
-const oneMonth = 30 * oneDay;
-
-const onePerHour = 1e18 / oneHour;
-const onePerMonth = 1e18 / oneMonth;
-
-console.log(`1 token per hour: ${onePerHour.toFixed(0)} tokens (wei) / second`);
-console.log(`1 token per month: ${onePerMonth.toFixed(0)} tokens (wei) / second`);
-```
-
-</Code>
-
-
-- Pay attention to units! See [Solidity docs](https://docs.soliditylang.org/en/v0.8.5/units-and-global-variables.html?highlight=wei#ether-units)
 ---
 
-# 📡 Fetch Data
+# Outline
 
-- Accounts, flows, token events, transactions
-- [Playground](https://thegraph.com/explorer/subgraph/superfluid-finance/superfluid-xdai) from The Graph
-- 📖 Docs + learning resources [here](https://docs.superfluid.finance/superfluid/docs/subgraph)
+```
+5 min - Graph queries 
+30 min - Dev environment setup
+30 min - ERC20 subgraph
+10 min - Deploy & test
+```
+
+Prerequisites - See the main readme
+
+---
+
+# 📡 Graph Query
+
+- [Playground](https://thegraph.com/explorer/subgraph/superfluid-finance/superfluid-xdai)
 
 ```js
 const query = `{
-    account(id: "0x000deb0c92e6d3da7f77ed01b8473b3f7f4efc39") {
-        flowsOwned {
-            flowRate
-            sum
-            lastUpdate
-            token { 
-                id
-                symbol
-            }
-        }
-    }
+    # TODO
   }
 `
 const result = await axios.post(QUERY_URL, { query })
@@ -111,7 +47,7 @@ const result = await axios.post(QUERY_URL, { query })
 
 ---
 
-# 📡 Fetch Data - Example  
+# 📡 Graph Query - Example  
 
 <GraphQuery/>
 
@@ -119,56 +55,10 @@ const result = await axios.post(QUERY_URL, { query })
 
 ---
 
-# Calculating Totals
-
-<Code>
-
-```js
-const now = new Date() 
-const THREE_HOURS_AGO = new Date(now - 3 * 3600); 
-const lastUpdate = THREE_HOURS_AGO
-const sum = 0
-const flowRate = 0.00027778 // 1 per hour
-
-const totalFlowed = sum + flowRate * (now - lastUpdate)
-
-console.log(`Total flowed: ${totalFlowed} tokens`)
-```
-
-</Code>
-
-- Use a Big Number library like `bn.js` or `@ethersproject/units`
-
----
-
-# Streams are ALIVE! 🧟
-
-```js
-const interestEarnedIn2Seconds = rate * 2
-React.useEffect(() => {
-    const timer = setTimeout(() => {
-        setCount(count + interestEarnedIn2Seconds);
-    }, 2000);
-    return () => clearTimeout(timer);
-});
-```
-
-<Counter initialValue={1000000} rate={.00027778}/>
-
-- See the React component above in `/components/Counter.js`
----
-
 # 🌄 Your Adventure Awaits
 
-## Super Tokens 🦸
-
-- **Streams**: Move tokens over time
-- **ERC777**:  Tokens which can "react" to certain events using callbacks. Learn about the standard at https://erc777.org
-- **Batch Call**: Have you ever wanted to execute 100 transactions at the same time? Learn how in the [docs](https://docs.superfluid.finance/superfluid/docs/batch-call).
-
-## Super Apps 🤖
-
-Automated flows, NFTs, games, etc.
+- Subgraph Templates for multiple contracts (eg. factory)
+- Multi-network deployment 
 
 ---
 
