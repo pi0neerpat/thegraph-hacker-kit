@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "node": "hardhat node --hostname 0.0.0.0",
-    "deploy": "hardhat run scripts/deploy.js --network localhost"
+    "test-transfers": "hardhat run scripts/test-transfers.js --network localhost",
+    "test-full": "hardhat run scripts/test-full.js --network localhost"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
