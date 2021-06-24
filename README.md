@@ -8,13 +8,9 @@
   </a>
 </p>
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+> Presentation and materials for The Graph developers taking their first space-walk 🧑‍🚀
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
-> Presentation and materials for The Graph developers taking their first space-walk :astronaut:
+Are you ready to learn how to write subgraphs? Start the countdown.
 
 #### 3...
 
@@ -26,24 +22,23 @@
 
 ## Authors
 
-Pi0neerpat and dan13ram are experienced subgraph developers and members of The Raid Guild, a web3 consultancy and services DAO. They've worked on subgraph projects for clients such as Superfluid, xDai Omnibridge, NFTX, and rDAI.
+Pi0neerpat and dan13ram are experienced subgraph developers and are mercenaries in The Raid Guild, a web3 consultancy and services DAO. They've worked on subgraph projects for clients such as Superfluid, xDai Omnibridge, NFTX, and rDAI.
 
 👤 **pi0neerpat**
 
-From creating subgraphs, consuming them in dapps, and even running a Graph Protocol Indexer, Patrick is a jack-of-all-trades in web3. He strives for excellence in both technical writing and guided-instruction, and is always open to questions from his students.
+From creating subgraphs, consuming them in dapps, and even running a Graph Protocol Indexer, pi0neerpat is a jack-of-all-trades in web3. He strives for excellence in both technical writing and guided-instruction, and is always open to questions from his students.
 
 - Website: https://patrickgallagher.dev
-  - Twitter: [@pi0neerpat](https://twitter.com/pi0neerpat)
-  - GitHub: [@pi0neerpat](https://github.com/pi0neerpat)
+- Twitter: [@pi0neerpat](https://twitter.com/pi0neerpat)
+- GitHub: [@pi0neerpat](https://github.com/pi0neerpat)
 
 👤 **dan13ram**
 
 - Website: https://
+- Twitter: [@](https://twitter.com/)
+- GitHub: [@](https://github.com/)
 
-  - Twitter: [@](https://twitter.com/)
-  - GitHub: [@](https://github.com/)
-
-## Hire Us ⚔️ https://raidguild.org ⚔️
+## ⚔️ Hire Us • https://RaidGuild.org ⚔️
 
 ## Show your support
 
@@ -51,9 +46,9 @@ Give a ⭐️ if this project helped you!
 
 ## Contents
 
-- 🧑‍🚀 Subgraph Hacker Bootcamp 🥾
-- Recorded Live Workshop, including audience Q+A
-- A sense of "I can do this"
+- 🧑‍🚀 Subgraph Developer Bootcamp 🥾
+- Recorded Live Workshop, including Q+A
+- A feeling of "I can do this"
 
 ## Objectives
 
@@ -96,7 +91,7 @@ npm i -g truffle ganache-cli @graphprotocol/graph-cli
 
 ## Thank You!
 
-The workshop and materials here were made possible thanks to a grant from The Graph Protocol.
+The workshop and these materials were made possible thanks to a grant from The Graph Protocol.
 
 ---
 
