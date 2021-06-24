@@ -68,16 +68,20 @@ You will:
 
 In order to be prepared for this course you **MUST already understand the basics of graphql**. Luckily some very hard-working people put together an excellent interactive tutorial for you!
 
-Spend at least 1 hour doing the tutorial, and skimming the docs:
+Spend at _least 1 hour_ doing the tutorial and skimming the docs:
 
-Graphql Tutorial: https://graphql.org/learn/
-Making Graph Queries: https://thegraph.com/docs/graphql-api#queries
+- Graphql Tutorial: https://graphql.org/learn/
+- Making Graph Queries: https://thegraph.com/docs/graphql-api#queries
 
-Software required:
+Software installation requirement - have these already installed:
 
 - [docker](https://docs.docker.com/install/)
 - [docker-compose](https://docs.docker.com/compose/install/)
-- Npm packages `yarn global add truffle ganache-cli @graphprotocol/graph-cli`
+- A few npm packages:
+
+```bash
+npm i -g truffle ganache-cli @graphprotocol/graph-cli
+```
 
 ## Additional resources:
 
@@ -85,7 +89,7 @@ Software required:
 
 ## From the Authors:
 
-- https://raidguild.org/ - Hire us!
+- https://raidguild.org/ - Web3 consultancy and services organization. Hire us!
 - https://oneclickdapp.com - Easy interfaces for any smart contract
 - https://spendless.io/ - No-loss giving for charity
 - https://superfluid.finance - Defi primitive for recurring payments and novel token features
