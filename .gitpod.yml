@@ -1,7 +1,7 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   - init: cd presentation && yarn # runs during prebuild
-    command: cd presentation && yarn start
+    command: yarn start
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
