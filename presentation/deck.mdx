@@ -1,5 +1,7 @@
 import { Head } from "mdx-deck";
 import Code from 'mdx-code';
+import { CodeSurfer } from "code-surfer"
+import { nightOwl } from "@code-surfer/themes"
 
 import myTheme from './theme'
 
@@ -52,6 +54,25 @@ const result = await axios.post(QUERY_URL, { query })
 <GraphQuery/>
 
 - See the React component above in `/components/GraphQuery.js`
+
+---
+
+# ERC20 Example
+
+---
+
+<CodeSurfer theme={nightOwl}>
+
+```yaml showNumbers title="Subgraph.yaml" file=./subgraph.yaml
+```
+
+```yaml showNumbers 10:14 title="Token details" file=./subgraph.yaml
+```
+
+```yaml showNumbers 15:26 title="Mappings" file=./subgraph.yaml
+```
+
+</CodeSurfer>
 
 ---
 
