@@ -16,15 +16,23 @@
 
 > Presentation and materials for The Graph developers taking their first space-walk :astronaut:
 
-## Launch the presentation now
+#### 3...
 
-**🍎🍎🍎🍎[Presentation](https://gitpod.io/#https://github.com/pi0neerpat/thegraph-hacker-kit)🍎🍎🍎🍎**
+#### 2...
+
+#### 1...
+
+## Launch! 👉 [click here](https://gitpod.io/#https://github.com/pi0neerpat/thegraph-hacker-kit) 🌍🚀 🌠🧑‍🚀🌙
 
 ## Authors
 
+Pi0neerpat and dan13ram are experienced subgraph developers and members of The Raid Guild, a web3 consultancy and services DAO. They've worked on subgraph projects for clients such as Superfluid, xDai Omnibridge, NFTX, and rDAI.
+
+### HIRE US ⚔️ https://raidguild.org/ ⚔️
+
 👤 **pi0neerpat**
 
-From creating subgraphs, consuming them in dapps, and even running a Graph Protocol Indexer, Patrick is a jack-of-all-trades in web3. He strives for excellence in both technical writing and guided-instruction, and is always open to questions for his students.
+From creating subgraphs, consuming them in dapps, and even running a Graph Protocol Indexer, Patrick is a jack-of-all-trades in web3. He strives for excellence in both technical writing and guided-instruction, and is always open to questions from his students.
 
 - Website: https://patrickgallagher.dev
   - Twitter: [@pi0neerpat](https://twitter.com/pi0neerpat)
@@ -70,6 +78,7 @@ Making Graph Queries: https://thegraph.com/docs/graphql-api#queries
 
 ## From the Authors:
 
+- https://raidguild.org/ - Hire us!
 - https://oneclickdapp.com - Easy interfaces for any smart contract
 - https://spendless.io/ - No-loss giving for charity
 - https://superfluid.finance - Defi primitive for recurring payments and novel token features
