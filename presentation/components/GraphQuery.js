@@ -22,7 +22,7 @@ const GraphQuery = () => {
 
     const loadData = async () => {
         const result = await axios.post(GRAPH_QUERY_URL, { query });
-        setData(result.data.data.account);
+        setData(result.data.data.user);
     };
 
     React.useEffect(() => {
