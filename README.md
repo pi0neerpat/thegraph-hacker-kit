@@ -6,6 +6,9 @@
   <a href="https://twitter.com/pi0neerpat" target="_blank">
     <img alt="Twitter: pi0neerpat" src="https://img.shields.io/twitter/follow/pi0neerpat.svg?style=social" />
   </a>
+   <a href="https://twitter.com/dan13ram" target="_blank">
+    <img alt="Twitter: dan13ram" src="https://img.shields.io/twitter/follow/dan13ram.svg?style=social" />
+  </a>
 </p>
 
 > Presentation and materials for The Graph developers taking their first space-walk 🧑‍🚀
