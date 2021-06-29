@@ -36,13 +36,17 @@ Prerequisites - See the main readme
 
 # 📡 Graph Query
 
-- [Playground](https://thegraph.com/explorer/subgraph/superfluid-finance/superfluid-xdai)
+- [Playground](https://thegraph.com/explorer/subgraph/dan13ram/fdai-token)
 
 ```js
 const query = `{
-    # TODO
+  users(first: 5, where: {balance_gt: 0}) {
+    id
+    balance
   }
+}
 `
+const QUERY_URL = `https://api.thegraph.com/subgraphs/name/dan13ram/fdai-token`
 const result = await axios.post(QUERY_URL, { query })
 ```
 
@@ -57,8 +61,6 @@ const result = await axios.post(QUERY_URL, { query })
 ---
 
 # ERC20 Example 💰
-
-
 
 - How many tokens does a user have?
 

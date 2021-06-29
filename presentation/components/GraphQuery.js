@@ -1,44 +1,40 @@
-import React from "react"
-import axios from 'axios'
+import React from "react";
+import axios from "axios";
 import { JsonToTable } from "react-json-to-table";
 
-const NETWORK_NAME = 'goerli'
-const GRAPH_API_BASE_URL = "https://api.thegraph.com/subgraphs/name/superfluid-finance/superfluid-"
-const USER_ADDRESS = "0x000deb0c92e6d3da7f77ed01b8473b3f7f4efc39"
-const QUERY_URL = GRAPH_API_BASE_URL + NETWORK_NAME
+const GRAPH_QUERY_URL =
+    "https://api.thegraph.com/subgraphs/name/dan13ram/fdai-token";
+const USER_ADDRESS = "0x2bf02814ea0b2b155ed47b7cede18caa752940e6";
 const query = `
 {
-    account(id: "${USER_ADDRESS}") {
-        flowsOwned {
-            flowRate
-            sum
-            lastUpdate
-            token { 
-                id
-                symbol
-            }
-        }
+  user(id: "${USER_ADDRESS}"){
+    address: id
+    balance
+    token {
+      address: id
+      symbol
     }
   }
-`
+}
+`;
 const GraphQuery = () => {
-    const [data,setData] = React.useState({})
+    const [data, setData] = React.useState({});
 
     const loadData = async () => {
-        const result = await axios.post(QUERY_URL, { query })
-        setData(result.data.data.account)
-    }
+        const result = await axios.post(GRAPH_QUERY_URL, { query });
+        setData(result.data.data.user);
+    };
 
-    React.useEffect(()=>{
-        loadData()
-    })
+    React.useEffect(() => {
+        loadData();
+    });
     return (
         <>
-            User address: {USER_ADDRESS}<br/>
-            Network: {NETWORK_NAME}
+            User address: {USER_ADDRESS}
+            <br />
             <JsonToTable json={data} />
         </>
-    )
-}
+    );
+};
 
-export default GraphQuery
+export default GraphQuery;
