@@ -75,6 +75,7 @@ Software installation requirement - have these already installed:
 
 - [docker](https://docs.docker.com/install/)
 - [docker-compose](https://docs.docker.com/compose/install/)
+- [yarn](https://yarnpkg.com/getting-started/install/)
 
 
 ## Additional resources:
