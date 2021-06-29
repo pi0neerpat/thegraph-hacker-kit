@@ -34,9 +34,9 @@ From creating subgraphs, consuming them in dapps, and even running a Graph Proto
 
 👤 **dan13ram**
 
-- Website: https://
-- Twitter: [@](https://twitter.com/)
-- GitHub: [@](https://github.com/)
+- Website: https://dan13ram.com
+- Twitter: [@dan13ram](https://twitter.com/dan13ram)
+- GitHub: [@dan13ram](https://github.com/dan13ram)
 
 ## ⚔️ Hire Us • https://RaidGuild.org ⚔️
 
