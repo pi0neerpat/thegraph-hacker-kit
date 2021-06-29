@@ -75,11 +75,7 @@ Software installation requirement - have these already installed:
 
 - [docker](https://docs.docker.com/install/)
 - [docker-compose](https://docs.docker.com/compose/install/)
-- A few npm packages:
 
-```bash
-npm i -g truffle ganache-cli @graphprotocol/graph-cli
-```
 
 ## Additional resources:
 
