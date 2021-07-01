@@ -165,7 +165,7 @@ sudo rm -rf data
 docker-compose up
 ```
 
-2. Deploy the contracts to ganache (if needed)
+2. Deploy the contracts to the local hardhat node (if needed)
 
 Update the contract address in `subgraph.yaml` (if needed)
 
