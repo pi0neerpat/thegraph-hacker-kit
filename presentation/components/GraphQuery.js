@@ -27,7 +27,7 @@ const GraphQuery = () => {
 
     React.useEffect(() => {
         loadData();
-    });
+    }, []);
     return (
         <>
             User address: {USER_ADDRESS}
