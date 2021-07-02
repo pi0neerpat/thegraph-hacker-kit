@@ -52,6 +52,17 @@ const result = await axios.post(QUERY_URL, { query })
 
 ---
 
+# 📡 Graph Query
+
+- From your command line
+
+```bash
+$ QUERY_URL='https://api.thegraph.com/subgraphs/name/dan13ram/fdai-token'
+$ curl -X POST -d "@examples/graphql/balance_query.gql" $QUERY_URL | json_pp 
+```
+
+---
+
 # 📡 Graph Query - Example  
 
 <GraphQuery/>

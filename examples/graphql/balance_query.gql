@@ -1,0 +1,8 @@
+{
+  "query": "{
+    users(first: 5, where: { balance_gt: 0 }) {
+      id
+      balance
+    }
+  }"
+}
