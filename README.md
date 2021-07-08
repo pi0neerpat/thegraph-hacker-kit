@@ -81,6 +81,11 @@ Software installation requirement - have these already installed:
 ## Additional resources:
 
 - Run a Graph Indexer using Docker [pi0neerpat/indexer-docker-compose](https://github.com/pi0neerpat/indexer-docker-compose)
+- Helper functions to quickly manipulate events [protofire/subgraph-toolkit](https://github.com/protofire/subgraph-toolkit)
+
+## Known issues:
+
+- Whenever possible, rely on the generated schema to map your event types, as importing external libraries might [be](https://github.com/graphprotocol/graph-cli/issues/663) [difficult](https://github.com/graphprotocol/graph-cli/issues/258). This is due to the [AssemblyScript](https://www.assemblyscript.org/) compiler used by TheGraph. If you rely on any external functions, make sure to extend it's default [TypeScript configuration](https://github.com/protofire/subgraph-toolkit/blob/main/tsconfig.json#L2).
 
 ## From the Authors:
 
