@@ -1,0 +1,44 @@
+type User @entity {
+  id: ID! # address
+  balances: [Balance!]! @derivedFrom(field: "owner")
+  ownerAllowances: [Allowance!]! @derivedFrom(field: "owner")
+  spenderAllowances: [Allowance!]! @derivedFrom(field: "spender")
+  fromTransfers: [Transfer!]! @derivedFrom(field: "from")
+  toTransfers: [Transfer!]! @derivedFrom(field: "to")
+}
+
+type Token @entity {
+  id: ID! # address
+  decimals: Int!
+  name: String!
+  symbol: String!
+  totalSupply: BigInt!
+  balances: [Balance!]! @derivedFrom(field: "token")
+  transfers: [Transfer!]! @derivedFrom(field: "token")
+  allowances: [Allowance!]! @derivedFrom(field: "token")
+}
+
+type Balance @entity {
+  id: ID! # token-owner
+  owner: User!
+  token: Token!
+  balance: BigInt!
+}
+
+type Transfer @entity {
+  id: ID! # tx
+  value: BigInt!
+  from: User!
+  to: User!
+  token: Token!
+  timestamp: BigInt!
+}
+
+type Allowance @entity {
+  id: ID! # token-owner-spender
+  value: BigInt!
+  timestamp: BigInt!
+  token: Token!
+  owner: User!
+  spender: User!
+}

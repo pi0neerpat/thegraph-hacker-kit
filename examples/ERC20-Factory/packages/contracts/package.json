@@ -6,14 +6,11 @@
     "local-node": "hardhat node --hostname 0.0.0.0",
     "compile": "hardhat compile",
     "test-deploy": "hardhat run scripts/deploy.js --network localhost",
-    "test-mints": "hardhat run scripts/mints.js --network localhost",
-    "test-transfers": "hardhat run scripts/transfers.js --network localhost",
-    "test-approvals": "hardhat run scripts/approvals.js --network localhost",
-    "test-all": "hardhat run scripts/all.js --network localhost"
+    "test-new-token": "hardhat run scripts/new-token.js --network localhost"
   },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",
-    "@openzeppelin/contracts": "^4.1.0",
+    "@openzeppelin/contracts-upgradeable": "^4.2.0",
     "ethers": "^5.3.1",
     "hardhat": "^2.4.0",
     "prettier": "^2.3.1"
