@@ -17,8 +17,8 @@ dataSources:
       abis:
         - name: TestTokenFactory
           file: ./src/abis/TestTokenFactory.json
-        - name: TestTokenUpgradeable
-          file: ./src/abis/TestTokenUpgradeable.json
+        - name: TestToken
+          file: ./src/abis/TestToken.json
       entities:
         - Token
       eventHandlers:
@@ -26,18 +26,18 @@ dataSources:
           handler: handleNewToken
 templates:
   - kind: ethereum/contract
-    name: TestTokenUpgradeable
+    name: TestToken
     network: {{network}}
     source:
-      abi: TestTokenUpgradeable
+      abi: TestToken
     mapping:
       file: ./src/mappings/token.ts
       kind: ethereum/events
       apiVersion: 0.0.4
       language: wasm/assemblyscript
       abis:
-        - name: TestTokenUpgradeable
-          file: ./src/abis/TestTokenUpgradeable.json
+        - name: TestToken
+          file: ./src/abis/TestToken.json
       entities:
         - Token
       eventHandlers:

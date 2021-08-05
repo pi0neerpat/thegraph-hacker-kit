@@ -3,8 +3,8 @@ const { utils } = ethers;
 
 const { ERC20_TOKEN_FACTORY_ADDRESS } = process.env;
 
-const tokenName = 'Test Token 01';
-const tokenSymbol = 'TST01';
+const tokenName = 'Test Token 02';
+const tokenSymbol = 'TST02';
 
 const awaitTokenAddress = async tx => {
   const receipt = await tx.wait();

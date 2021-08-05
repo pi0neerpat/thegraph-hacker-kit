@@ -35,7 +35,7 @@ Also in a separate terminal clone the repo and install the node packages:
 
 ````bash
 git clone https://github.com/pi0neerpat/thegraph-hacker-kit/
-cd thegraph-hacker-kit/examples/ERC20
+cd thegraph-hacker-kit/examples/erc20
 yarn
 
 ### Ganache
@@ -100,7 +100,7 @@ ethereum: 'mainnet:http://172.17.0.1:8545'
 
 > Note: If you're returning from an earlier work session, skip down to [Testing](#testing).
 
-Navigate to the `examples/ERC20/packages/contracts` directory and run deploy command.
+Navigate to the `examples/erc20/packages/contracts` directory and run deploy command.
 
 ```bash
 yarn test-deploy
@@ -121,7 +121,7 @@ Enter the address for `TestToken` from the previous step in `config/local.json`.
 
 We are now ready to deploy our subgraph.
 
-Navigate to the `examples/ERC20/packages/subgraphs` directory
+Navigate to the `examples/erc20/packages/subgraphs` directory
 
 ```bash
 # Generate "subgraph.yaml" using the template

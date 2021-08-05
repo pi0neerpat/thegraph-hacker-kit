@@ -1,7 +1,7 @@
 pragma solidity >=0.8.0 <0.9.0;
 //SPDX-License-Identifier: UNLICENSED
 
-import './TestTokenUpgradeable.sol';
+import './TestToken.sol';
 import '@openzeppelin/contracts-upgradeable/proxy/ClonesUpgradeable.sol';
 
 contract TestTokenFactory {
@@ -17,7 +17,7 @@ contract TestTokenFactory {
         returns (address _clone)
     {
         _clone = ClonesUpgradeable.clone(implementation);
-        TestTokenUpgradeable(_clone).init(name, symbol);
+        TestToken(_clone).init(name, symbol);
         emit NewToken(_clone);
     }
 }

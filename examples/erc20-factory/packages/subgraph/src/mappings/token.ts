@@ -1,7 +1,7 @@
 import {
   Transfer as TransferEvent,
   Approval as ApprovalEvent,
-} from '../types/templates/TestTokenUpgradeable/TestTokenUpgradeable';
+} from '../types/templates/TestToken/TestToken';
 import { getToken, getTransfer, getAllowance, getUser } from './helpers';
 
 export function handleTransfer(event: TransferEvent): void {

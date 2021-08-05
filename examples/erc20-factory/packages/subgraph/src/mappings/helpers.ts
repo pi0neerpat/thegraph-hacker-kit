@@ -1,6 +1,6 @@
 import { Address, BigInt, Bytes } from '@graphprotocol/graph-ts';
 import { Token, Transfer, Allowance, Balance, User } from '../types/schema';
-import { TestTokenUpgradeable as ERC20 } from '../types/templates/TestTokenUpgradeable/TestTokenUpgradeable';
+import { TestToken as ERC20 } from '../types/templates/TestToken/TestToken';
 
 export function getToken(tokenAddress: Address): Token {
   let token = Token.load(tokenAddress.toHexString());

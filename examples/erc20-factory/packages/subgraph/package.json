@@ -1,5 +1,5 @@
 {
-  "name": "@erc20-example/subgraph",
+  "name": "@erc20-factory-example/subgraph",
   "version": "1.0.0",
   "dependencies": {
     "@graphprotocol/graph-cli": "0.20.1",

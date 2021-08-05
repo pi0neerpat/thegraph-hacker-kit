@@ -1,5 +1,5 @@
 import { NewToken as NewTokenEvent } from '../types/TestTokenFactory/TestTokenFactory';
-import { TestTokenUpgradeable as TestTokenTemplate } from '../types/templates';
+import { TestToken as TestTokenTemplate } from '../types/templates';
 import { getToken } from './helpers';
 
 export function handleNewToken(event: NewTokenEvent): void {

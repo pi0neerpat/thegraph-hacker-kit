@@ -1,5 +1,5 @@
 {
-  "contractName": "TestTokenUpgradeable",
+  "contractName": "TestToken",
   "abi": [
     {
       "inputs": [],

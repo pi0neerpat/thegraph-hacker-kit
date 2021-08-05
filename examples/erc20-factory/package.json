@@ -1,10 +1,10 @@
 {
-  "name": "erc20-example",
+  "name": "erc20-factory-example",
   "version": "1.0.0",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "local-node": "yarn workspace @erc20-example/contracts local-node",
+    "local-node": "yarn workspace @erc20-factory-example/contracts local-node",
     "format": "prettier --ignore-path .gitignore --write \"{*,**/*}.{ts,tsx,js,jsx,json,md,sol}\""
   },
   "workspaces": {
