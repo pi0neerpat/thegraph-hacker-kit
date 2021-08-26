@@ -1,0 +1,23 @@
+{
+  "name": "erc20-factory-example",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "local-node": "yarn workspace @erc20-factory-example/contracts local-node",
+    "format": "prettier --ignore-path .gitignore --write \"{*,**/*}.{ts,tsx,js,jsx,json,md,sol}\""
+  },
+  "workspaces": {
+    "nohoist": [
+      "**/@graphprotocol/graph-ts",
+      "**/@graphprotocol/graph-ts/**"
+    ],
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "devDependencies": {
+    "prettier": "^2.3.2",
+    "prettier-plugin-solidity": "^1.0.0-beta.17"
+  }
+}

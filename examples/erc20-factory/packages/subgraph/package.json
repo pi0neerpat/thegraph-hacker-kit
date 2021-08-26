@@ -1,0 +1,21 @@
+{
+  "name": "@erc20-factory-example/subgraph",
+  "version": "1.0.0",
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.21.1",
+    "@graphprotocol/graph-ts": "0.20.1",
+    "mustache": "^4.2.0"
+  },
+  "license": "MIT",
+  "scripts": {
+    "auth": "graph auth https://api.thegraph.com/ $GRAPH_ACCESS_TOKEN",
+    "build": "graph build",
+    "codegen": "graph codegen --output-dir src/types/",
+    "prepare-local": "mustache config/local.json subgraph.template.yaml > subgraph.yaml",
+    "create-local": "graph create --node http://localhost:8020/ test/erc20-factory-example",
+    "remove-local": "graph remove --node http://localhost:8020/ test/erc20-factory-example",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 test/erc20-factory-example",
+    "prepare-goerli": "mustache config/goerli.json subgraph.template.yaml > subgraph.yaml",
+    "deploy-goerli": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ test/erc20-factory-example"
+  }
+}

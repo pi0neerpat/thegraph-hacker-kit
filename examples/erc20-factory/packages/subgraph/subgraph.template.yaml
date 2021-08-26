@@ -1,0 +1,47 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: TestTokenFactory
+    network: {{network}}
+    source:
+      abi: TestTokenFactory
+      address: "{{factoryAddress}}"
+      startBlock: {{startBlock}}
+    mapping:
+      file: ./src/mappings/factory.ts
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      abis:
+        - name: TestTokenFactory
+          file: ./src/abis/TestTokenFactory.json
+        - name: TestToken
+          file: ./src/abis/TestToken.json
+      entities:
+        - Token
+      eventHandlers:
+        - event: NewToken(address)
+          handler: handleNewToken
+templates:
+  - kind: ethereum/contract
+    name: TestToken
+    network: {{network}}
+    source:
+      abi: TestToken
+    mapping:
+      file: ./src/mappings/token.ts
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      abis:
+        - name: TestToken
+          file: ./src/abis/TestToken.json
+      entities:
+        - Token
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
